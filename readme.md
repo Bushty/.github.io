@@ -1,1 +1,1 @@
-[Link to my personal github page](https://bushty.github.io)
+[Link to my personal github page](https://bushty.github.io/.github.io/)

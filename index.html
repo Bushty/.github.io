@@ -21,7 +21,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="header__links-wrapper">
-                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
                     </li>
                     <li class="header__links-wrapper">
                         <a href="#contact">Contact</a>
@@ -30,34 +30,180 @@
             </div>
         </div>
     </header>
+
+
     <div class="main__content">
 
         <section id="home-hero">
-            <p><h1>HEY, I'M BASTIAN FALK GERKUM</h1></p>
-            <p>A Computer Science student with a passion for Coding and Cyber Security</p>
+            <div class="home-hero__content">
+
+                <h1 class="heading-primary">Hey, i'm Bastian <span style="color:blue">Falk</span> Gerkum</h1>
+                <div class="home-hero__info">
+                    <p class="text-primary">Computer Science Student // Coder // PenTester</p>
+                </div>
+                <div class="home-hero__btn">
+                    <a href="#experience" class="btn btn-bg">Experience</a>
+                </div>
+            </div>
+            <div class="home-hero__socials">
+                <div class="home-hero__social">
+                    <a class="homer-hero__social-icon-link" target="_blank" rel="noreferer" href="https://www.linkedin.com/in/bastian-gerkum-b21925198/">
+                        <img src="./assets/svg/linkedin-dark.svg" alt="Falk LinkedIn Profile" class="home-hero__social-icon">
+                    </a>
+                </div>
+                <div class="home-hero__social">
+                    <a class="homer-hero__social-icon-link" target="_blank" rel="noreferer" href="https://github.com/Bushty">
+                        <img src="./assets/svg/github-dark.svg" alt="Falk Github Profile" class="home-hero__social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="home-hero__mouse-scroll">
+                <div class="mouse"></div>
+            </div>
         </section>
 
         <section id="about">
-            <h1>ABOUT ME</h1>
+            <div class="main-container">
+                <div class="heading heading-sec heading-sec__mb-med">
+                    <div class="heading-sec__main">
+                        <h1>ABOUT ME</h1>
+                    </div>
+                    <div class="heading-sec__sub">
+                        Here you will find more information about me, what i do, and my current skills mostly in coding and technology.
+                    </div>
+                </div>
+            </div>
+            <div class="about__content">
+                <div class="about__content-main">
+                    <h3 class="about__content-title">
+                        Get to know me!
+                    </h3>
+                    <div class="about__content-details">
+                        <div class="about__content-details-para">
+                            I'm currently studying Computer Science at the <a href=https://www.haw-hamburg.de/ style="font-weight: bold;">HAW Hamburg</a>, Germany and work as a Cyber Security Associate at <a href=https://pcg.io/ style="font-weight: bold;">Public Cloud Group</a>, where i do PenTests, SIEM and other Cyber Security-related work.
+                        </div>
+                        <div class="about__content-details-para">
+                            In my freetime i enjoy coding where i primarily focus on <strong>Web Development</strong> and <strong>Python</strong>. Check out some of my work in the <strong>Experience</strong> section.
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
+                </div>
+                <div class="about__content-skills">
+                    <h3 class="about__content-title">My Skills</h3>
+                    <div class="skills">
+                        <div class="skills-skill">HTML</div>
+                        <div class="skills-skill">CSS</div>
+                        <div class="skills-skill">JavaScript</div>
+                        <div class="skills-skill">PHP</div>
+                        <div class="skills-skill">Python</div>
+                        <div class="skills-skill">GIT</div>
+                        <div class="skills-skill">Github</div>
+                        <div class="skills-skill">Google Cloud</div>
+                        <div class="skills-skill">Penetration Testing</div>
+                        <div class="skills-skill">Linux</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="projects">
-            <h1>My Projects</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente accusamus beatae hic, quae id magnam ipsa, voluptatibus consequatur repudiandae iste porro placeat eaque excepturi, pariatur cupiditate laudantium nobis voluptatum soluta.
+        <section id="experience">
+            <div class="main-container">
+                <h2 class="heading heading-sec heading-sec__mb-bg">
+                    <span class="heading-sec__main">
+                        Experience
+                    </span>
+                    <span class="heading-sec__sub">
+                        Here you will find some of the personal and professional projects that i have created/worked on
+                    </span>
+                </h2>
+                <div class="experience-content">
+                    <div class="experience-row">
+                        <div class="experience-row-img"></div>
+                        <div class="experience-row-content">
+                            <h3 class="experience-row-content-title">Penetration Testing</h3>
+                            <p class="experience-row-content-desc">bla bla bla</p>
+                            <a class="btn btn-med btn--theme dynamicBgClr" href="./subpages/pentest.html" target="_blank">Link</a>
+                        </div>
+                    </div>
+                    <div class="experience-row">
+                        <div class="experience-row-img"></div>
+                        <div class="experience-row-content">
+                            <h3 class="experience-row-content-title">Web Development</h3>
+                            <p class="experience-row-content-desc">bla bla bla</p>
+                            <a class="btn btn-med btn--theme dynamicBgClr" href="./subpages/webdev.html" target="_blank">Link</a>
+                        </div>
+                    </div>
+                    <div class="experience-row">
+                        <div class="experience-row-img"></div>
+                        <div class="experience-row-content">
+                            <h3 class="experience-row-content-title">Coding in Python</h3>
+                            <p class="experience-row-content-desc">bla bla bla</p>
+                            <a class="btn btn-med btn--theme dynamicBgClr" href="./subpages/python.html" target="_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
-            <div class="contact-container">
-                <div class="contact-main">
-                    <h1>Contact Me</h1>
-                    Feel free to contact me by submitting the form below and i will get back to you as soon as possible
+            <div class="main-container">
+                <h2 class="heading heading-sec heading-sec__mb-med">
+                    <span class="heading-sec__main heading-sec__main--lt">
+                        Contact 
+                    </span>
+                    <span class="heading-sec__sub heading-sec_sub--lt">
+                        Feel free to contact me by submitting the form below and i will get back to you as soon as possible
+                    </span>
+                </h2>
+                <div class="contact__form-container">
+                    <form action="#" class="contact__form" method="post">
+                        <input type="hidden" name="form-name" value="form 1">
+                        <div class="contact__form-field">
+                            <label class="contact__form-label" for="name">Name</label>
+                            <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name">
+                        </div>
+                        <div class="contact__form-field">
+                            <label class="contact__form-label" for="email">Email</label>
+                            <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email">
+                        </div>
+                        <div class="contact__form-field">
+                            <label class="contact__form-label" for="message">Message</label>
+                            <textarea required cols="30" rows="10" placeholder="Enter Your Message" type="text" class="contact__form-input" name="message" id="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--theme contact__btn">Submit</button>
+                    </form>
                 </div>
-                <div class="contact-form"></div>
             </div>
         </section>
-    </div>  
+    </div> 
+
     <footer>
-        
+        <div class="main-container">
+            <div class="main-footer__upper">
+                <div class="main-footer__row main-footer__row-1">
+                    <h2 class="heading heading-sm main-footer__heading-sm">
+                        <span>Socials</span>
+                    </h2>
+                    <div class="main-footer__socials-cont">
+                        <a target="_blank" rel="noreferer" href="https://www.linkedin.com/in/bastian-gerkum-b21925198/">
+                            <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="Falk LinkedIn Profile">
+                        </a>
+                        <a target="_blank" rel="noreferer" href="https://github.com/Bushty">
+                            <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="Falk Github Profile">
+                        </a>
+                    </div>
+                </div>
+                <div class="main-footer__row main-footer__row-2">
+                    <h2 class="heading heading-sm text-lt">Bastian Falk Gerkum</h2>
+                    <p class="main-footer_short-desc">
+                        Computer Science Student // Coder // PenTester
+                    </p>
+                </div>
+            </div>
+            <div class="main-footer__lower">
+                Made by <a rel="noreferer" href="./index.html" target="_blank">Bastian Falk Gerkum</a>
+            </div>
+        </div>
     </footer>
 
 </body>

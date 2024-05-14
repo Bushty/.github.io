@@ -1,9 +1,17 @@
+html {
+    font-size: 85%;
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: lightblue;
+    background-color: lightgrey;
     text-align: center;
-    background-color: white;
     display: block;
     box-sizing: border-box;
+    position: relative;
+    line-height: 1.5;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header {
@@ -24,7 +32,7 @@ header {
     display: flex;
 }
 
-header a {
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -57,3 +65,44 @@ section {
     margin-top: 10px;
     border: 1px solid black;
 }
+
+.btn {
+    background: #7843E9;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform .3s;
+}
+    .btn:hover {
+        transform: translateY(-3px);
+    }
+    .btn-bg {
+        padding: 1.5rem 8rem;
+        font-size: 2rem;
+    }
+
+.home-hero {
+    position: relative;
+    background-position: center;
+    background-color: #fff;
+    height: 100vh;
+    min-height: 80rem;
+    max-height: 120rem;
+    background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(../../assets/svg/common-bg.svg);
+}
+    .home-hero__content {
+        top: 50%;
+        left: 50%;
+        /* position: absolute;
+        transform: translate(-50%, -50%); */
+        max-width: 90%;
+        width: 90rem;
+    }
+    .home-hero__btn {
+        margin-top: 5rem;
+        text-align: center;
+    }

@@ -10,16 +10,16 @@
 html {
     font-size: 85%;
     scroll-behavior: smooth;
-    @media only screen and (max-width: 75em) {
+}   @media only screen and (max-width: 75em) {
         html {
           font-size: 59%; } }
-      @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
         html {
-          font-size: 56%; } }
-      @media only screen and (min-width: 112.5em) {
+        font-size: 56%; } }
+    @media only screen and (min-width: 112.5em) {
         html {
           font-size: 65%; } }
-}
+
 
 body {
     /* background-color: lightgrey;
@@ -38,6 +38,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+/*
+#### 0. Header ####
+*/
 
 header {
     padding: 10px 15px;
@@ -239,8 +243,7 @@ letter-spacing: 1px; }
     align-items: center;
     justify-content: space-between;
     padding: 1rem 5rem;
-}
-    @media only screen and (max-width: 56.25em) {
+}   @media only screen and (max-width: 56.25em) {
         .header__content {
             padding: 0 2rem;
         }
@@ -265,8 +268,7 @@ letter-spacing: 1px; }
     overflow: hidden;
     margin-right: 1.5rem;
     background: #7843E9;
-}
-    @media only screen and (max-width: 56.25em) {
+}   @media only screen and (max-width: 56.25em) {
         .header__logo-img-cont {
             width: 4.5rem;
             height: 4.5rem;
@@ -293,8 +295,7 @@ letter-spacing: 1px; }
 
 .header__links {
     display: flex;
-}
-    @media only screen and (max-width: 37.5em) {
+}   @media only screen and (max-width: 37.5em) {
         .header__links {
             display: none;
         }
@@ -309,8 +310,7 @@ letter-spacing: 1px; }
     letter-spacing: 1px;
     font-weight: 700;
     transition: color .3s;
-}
-    @media only screen and (max-width: 65.25em) {
+}   @media only screen and (max-width: 65.25em) {
         .header__link {
             padding: 3rem 1.8rem;
             font-size: 1.5rem;
@@ -325,8 +325,7 @@ letter-spacing: 1px; }
     display: none;
     width: 3rem;
     padding: 2.2rem 0;
-}
-    @media only screen and (max-width: 37.em) {
+}   @media only screen and (max-width: 37.em) {
         .header__main-ham-menu-cont {
             display: block;
         }
@@ -367,7 +366,7 @@ letter-spacing: 1px; }
     display: block;
     text-decoration: none;
     padding: 2.5rem 3rem;
-    
+
 }
     
 
@@ -381,8 +380,7 @@ letter-spacing: 1px; }
     min-height: 80rem;
     max-height: 120rem;
     position: relative;
-}
-    @media only screen and (max-width: 37.5em) {
+}   @media only screen and (max-width: 37.5em) {
         .home-hero {
             height: unset;
             min-height: unset;
@@ -397,8 +395,7 @@ letter-spacing: 1px; }
     background: white;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     padding: .5rem;
-}
-    @media only screen and (max-width: 56.25em) {
+}   @media only screen and (max-width: 56.25em) {
         .home-hero__socials {
             display: none;
         }
@@ -429,14 +426,14 @@ letter-spacing: 1px; }
 }
 
 .home-hero__content {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    position: grid; /* experimental */
     max-width: 90rem;
     width: 92%;
-}
-    @media only screen and (max-width: 37.5em) {
+}   @media only screen and (max-width: 37.5em) {
         .home-hero__content {
             padding: 19rem 0 13rem 0;
             margin: auto;
@@ -460,12 +457,56 @@ letter-spacing: 1px; }
      bottom: 3%;
      left: 50%;
      transform: translateX(-50%);
-}
-    @media only screen and (max-width: 37.em) {
+}   @media only screen and (max-width: 37.em) {
         .home-hero__mouse-scrol-cont {
             display: none;
         }
     }
+
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden
+}
+
+.mouse::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px
+    }
+}
+
+
+
+/*  
+#### 2. About Section ####
+  */
+  
 
 .about {
     background: #fafafa;
@@ -475,8 +516,7 @@ letter-spacing: 1px; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10rem;
-}
-    @media only screen and (max-width: 56.25rem) {
+}   @media only screen and (max-width: 56.25rem) {
         .about__content {
             grid-template-columns: 1fr;
             grid-gap: 8rem;
@@ -513,85 +553,302 @@ letter-spacing: 1px; }
     margin: 0 3px;
 }
 
-
-
-
-
-
-
-/*  */
-
-
-
-/* .header__content {
+.skills {
     display: flex;
+    flex-wrap: wrap
 }
 
-.header__name {
-    display: flex;
+.skills__skill {
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.6rem;
+    background: rgba(153,153,153,0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #666
 }
 
-.header__main {
-    display: box;
+/*
+#### 3. Experience Section ####
+*/
+
+.experience__row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 5rem;
+    margin-bottom: 11rem
+}   @media only screen and (max-width: 56.25em) {
+    .experience__row {
+        grid-template-columns:1fr;
+        grid-gap: 2rem;
+        margin-bottom: 8rem
+    }
+}   @media only screen and (max-width: 56.25em) {
+    .experience__row {
+        text-align:center
+    }
 }
 
-.header__links {
-    padding: 0;
-    margin: 0;
+.experience__row:last-child {
+    margin-bottom: 0
 }
 
-.header__links li {
-    display: inline-block;
-    margin-right: 10px;
+.experience__row-img-cont {
+    overflow: hidden
 }
 
-.main__content {
-    margin-top: 100px;
-}
-
-section {
+.experience__row-img {
+    width: 100%;
     display: block;
-    margin-top: 10px;
-    border: 1px solid black;
+    -o-object-fit: cover;
+    object-fit: cover
 }
 
-.btn {
-    background: #7843E9;
-    color: #fff;
+.experience__row-content {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start
+}   @media only screen and (max-width: 56.25em) {
+    .experience__row-content {
+        align-items:center
+    }
+}
+
+.experience__row-content-title {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 2rem
+}   @media only screen and (max-width: 37.5em) {
+    .experience__row-content-title {
+        font-size:2.4rem
+    }
+}
+
+.experience__row-content-desc {
+    font-size: 1.8rem;
+    color: #666;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 3rem
+} @media only screen and (max-width: 37.5em) {
+    .experience__row-content-desc {
+        font-size:1.7rem
+    }
+}
+
+
+/*
+#### 4. Contact Section ####
+*/
+
+.contact {
+    background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(../../assets/svg/common-bg.svg);
+    background-size: cover;
+    background-position: center
+}
+
+.contact__form-container {
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    background: white;
+    padding: 4rem;
+    margin-top: 6rem;
+    max-width: 80rem;
+    text-align: right;
+    width: 95%;
+    border-radius: 5px;
+    margin: 5rem auto 0 auto
+}   @media only screen and (max-width: 37.5em) {
+    .contact__form-container {
+        padding:3rem
+    }
+}
+
+.contact__form-field {
+    margin-bottom: 4rem
+}   @media only screen and (max-width: 37.5em) {
+    .contact__form-field {
+        margin-bottom:3rem
+    }
+}
+
+.contact__form-label {
+    color: #666;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     font-weight: 700;
-    text-transform: uppercase;
-    display: inline-block;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: transform .3s;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left
 }
-    .btn:hover {
-        transform: translateY(-3px);
-    }
-    .btn-bg {
-        padding: 1.5rem 8rem;
-        font-size: 2rem;
-    }
 
-.home-hero {
-    position: relative;
-    background-position: center;
-    background-color: #fff;
-    height: 100vh;
-    min-height: 80rem;
-    max-height: 120rem;
-    background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(../../assets/svg/common-bg.svg);
+.contact__form-input {
+    color: #333;
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1.6rem;
+    letter-spacing: 0px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-weight: 600
 }
-    .home-hero__content {
-        top: 50%;
-        left: 50%;
-        /* position: absolute;
-        transform: translate(-50%, -50%); 
-        max-width: 90%;
-        width: 90rem;
+
+.contact__form-input::-moz-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input:-ms-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input::placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input:-ms-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input::-ms-input-placeholder {
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input:-moz-placeholder {
+    opacity: 1;
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__form-input::-moz-placeholder {
+    opacity: 1;
+    color: #999;
+    font-weight: 600;
+    font-size: 1.6rem
+}
+
+.contact__btn {
+    width: 30%;
+    padding: 2rem 4rem;
+    font-size: 1.6rem;
+}   @media only screen and (max-width: 37.5em) {
+    .contact__btn {
+        width:100%;
     }
-    .home-hero__btn {
-        margin-top: 5rem;
-        text-align: center;
-    } */
+}
+
+
+
+/*
+#### 5. Footer ####
+*/
+
+.main-footer {
+    background: #000;
+    color: #fff
+}
+
+.main-footer__upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 0
+}   @media only screen and (max-width: 56.25em) {
+    .main-footer__upper {
+        padding:6rem 0
+    }
+}   @media only screen and (max-width: 37.5em) {
+    .main-footer__upper {
+        display:block
+    }
+}
+
+.main-footer__row-1 {
+    order: 2
+}   @media only screen and (max-width: 56.25em) {
+    .main-footer__row-1 {
+        margin-bottom:5rem
+    }
+}
+
+.main-footer__row-2 {
+    width: 40%;
+    order: 1;
+    max-width: 50rem
+}   @media only screen and (max-width: 56.25em) {
+    .main-footer__row-2 {
+        width:100%
+    }
+}
+
+.main-footer__short-desc {
+    margin-top: 2rem;
+    color: #eee;
+    font-size: 1.5rem;
+    line-height: 1.7
+}
+
+.main-footer__social-cont {
+    margin-top: 2rem
+}
+
+.main-footer__icon {
+    margin-right: 1rem;
+    width: 2.5rem
+}
+
+.main-footer__icon--mr-none {
+    margin-right: 0
+}
+
+.main-footer__lower {
+    padding: 4rem 0;
+    border-top: 1px solid #444;
+    color: #eee;
+    font-size: 1.2rem;
+    text-align: left;
+    text-align: center
+}
+
+.main-footer__lower a {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 2px
+}   @media only screen and (max-width: 56.25em) {
+    .main-footer__lower {
+        padding:3.5rem 0
+    }
+}
+
+
+
+/*
+#### 99. Experimental ####
+*/
+
+.main__content {
+    display: block;
+}
+
+footer {
+    background-color: black;
+    color: white
+}

@@ -430,18 +430,6 @@ textarea {
     margin-top: 5rem;
     text-align: center; }
 
-.impressum {
-  background: white;
-  background: linear-gradient(to right, rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url(./assets/svg/common-bg.svg);
-  color: black;
-
-  text-align: left;
-}
-.impressum__desc {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
 .project-details__content {
   padding: 8rem 0;
   max-width: 90rem;
@@ -714,3 +702,16 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+
+.impressum {
+  background: white;
+  background: linear-gradient(to right, rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8)), url(./assets/svg/common-bg.svg);
+  color: black;
+
+  text-align: left;
+}
+.impressum__desc {
+  text-align: left;
+  margin-bottom: 2rem;
+}
